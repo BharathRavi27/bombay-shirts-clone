@@ -1,0 +1,79 @@
+// section {
+// width: 1s00%;
+section {
+    display: flex;
+}
+
+.categories {
+    width  : 20%;
+    display: inline-block;
+
+}
+
+.items {
+    display: flex;
+
+    .sleeves,
+    .fabric,
+    .collar {
+        flex: 1;
+    }
+
+    .canvas {
+        flex: 2;
+
+        .canvas-wrap {
+            position: relative;
+
+            img {
+                position: absolute;
+                left    : 0;
+                top     : 0;
+            }
+
+            .canvas-collar-type {
+                z-index: 2;
+            }
+
+            .canvas-collar {
+                z-index: 2;
+            }
+
+            .canvas-button-holder {
+                z-index: 3;
+            }
+
+            .canvas-body {
+                z-index: 1;
+            }
+
+            .canvas-sleeve {
+                z-index: 1;
+            }
+
+            .canvas-pocket {
+                z-index: 2;
+            }
+        }
+    }
+}
+
+.w-40 {
+    width: 40%;
+}
+
+.d-inline {
+    display: inline-block;
+}
+
+.inside {
+    text-align: center;
+}
+
+.disclaimer {
+    position: absolute;
+    bottom  : 10px;
+    right   : 10px;
+}
+
+// }

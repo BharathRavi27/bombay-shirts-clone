@@ -1,0 +1,71 @@
+<section>
+    <p class="disclaimer">Declaimer: All contents displayed are only for demo purpose.</p>
+    <div class="w-40">
+        <mat-tab-group>
+            <mat-tab label="Fabric">
+                <div class="fabric">
+                    <div *ngFor="let fabric of itemsArr;let i = index">
+                        <div class="inside">
+                            <img (click)="selectedFabric = i" width="200" [src]="fabric.texture.body" alt="">
+                            <p>{{fabric.texture.color}}</p>
+                        </div>
+                    </div>
+                </div>
+            </mat-tab>
+            <mat-tab label="Collar">
+                <div class="collar">
+                    <div *ngFor="let collar of itemsArr[selectedFabric].texture.coller; let j = index">
+                        <div class="inside">
+                            <img (click)="selectedCollar = j" width="200" [src]="collar.url" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </mat-tab>
+            <mat-tab label="Sleeves">
+                <div class="sleeves">
+                    <div *ngFor="let sleeve of itemsArr[selectedFabric].texture.sleeves; let k = index">
+                        <div class="inside">
+
+                            <img (click)="selectedSleeve = k" width="200" [src]="sleeve.url" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </mat-tab>
+
+            <mat-tab label="Pocket">
+                <div class="pocket">
+                    <div *ngFor="let pocket of itemsArr[selectedFabric].texture.pockets; let l = index">
+                        <div class="inside">
+
+                            <img (click)="selectedPocket = l" width="200" [src]="pocket.url" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+    <div class="items w-40 d-inline">
+
+        <div class="canvas">
+
+            <div class="canvas-wrap">
+                <img [@inOutAnimation] class="canvas-collar-type" [src]="itemsArr[selectedFabric].texture.collar_type"
+                    alt="">
+                <img [@inOutAnimation] class="canvas-button-holder"
+                    [src]="itemsArr[selectedFabric].texture.button_holder" alt="">
+                <img [@inOutAnimation] class="canvas-collar"
+                    [src]="itemsArr[selectedFabric].texture.coller[selectedCollar].url" alt="">
+                <img [@inOutAnimation] class="canvas-body" [src]="itemsArr[selectedFabric].texture.body" alt="">
+                <img [@inOutAnimation] class="canvas-sleeve"
+                    [src]="itemsArr[selectedFabric].texture.sleeves[selectedSleeve].url" alt="">
+                <img [@inOutAnimation] class="canvas-pocket"
+                    [src]="itemsArr[selectedFabric].texture.pockets[selectedPocket].url" alt="">
+            </div>
+
+        </div>
+    </div>
+
+</section>

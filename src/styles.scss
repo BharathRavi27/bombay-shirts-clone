@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin          : 0;
+    font-family     : Roboto, "Helvetica Neue", sans-serif;
+    background-color: #000;
+    color           : #fff;
+}
+
+.mat-tab-label .mat-tab-label-content {
+
+    color: #fff !important;
+}
+
+.mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron {
+    border-color: rgb(255, 255, 255) !important;
+}
+
+.mat-tab-header-pagination-chevron {
+    border-color: rgb(255, 255, 255) !important;
+}
