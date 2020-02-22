@@ -1,6 +1,11 @@
 # Bombay Shirts
 
 Simple clone of https://www.bombayshirts.com/custom/shirt showing only the customization of a shirt.
+
+## DEMO
+
+Find demo here => https://jolly-borg-45a214.netlify.com/
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
